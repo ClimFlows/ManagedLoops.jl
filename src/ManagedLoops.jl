@@ -1,6 +1,6 @@
 module ManagedLoops
 
-export @with, @unroll, @__HERE__, offload, configure, no_simd
+export @with, @unroll, offload, configure, no_simd
 export LoopManager, HostManager, DeviceManager
 
 """
