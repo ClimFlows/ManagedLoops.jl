@@ -1,6 +1,6 @@
 module ManagedLoops
 
-export @unroll, @__HERE__, offload, no_simd
+export @with, @unroll, @__HERE__, offload, configure, no_simd
 export LoopManager, HostManager, DeviceManager
 
 """
@@ -42,6 +42,15 @@ several times on sub-ranges, or many times on 'ranges' consisting of a single in
 
 """
 @inline offload(fun, ::Nothing, args...) = fun(args...)
+
+
+"""
+    mgr_conf = configure(mgr, config)
+Returns a manager similar to `mgr` but with some extra information provided by `config`.
+The default behavior is to return `mgr` unchanged.
+This function is meant to be specialized by packages providing loop managers.
+"""
+configure(mgr, config) = mgr
 
 # default manager
 """
