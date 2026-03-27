@@ -1,7 +1,7 @@
 name = "ManagedLoops"
 uuid = "36a4119d-6b73-4371-88fe-ba2d91f5495d"
 authors = ["Thomas Dubos <thomas.dubos@lmd.ipsl.fr>"]
-version = "0.1.14"
+version = "0.1.15"
 
 [deps]
 MacroTools = "1914dd2f-81c6-5fcd-8719-6d5c9610ff09"
